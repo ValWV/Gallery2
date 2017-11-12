@@ -1,0 +1,295 @@
+<html>
+  <head>
+    <title>title
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/photoswipe.css" rel="stylesheet">
+    <link href="css/default-skin.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+ 
+/* ---- isotope ---- */
+	    
+	    
+.grid {
+  border: none;
+}
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* ---- .element-item ---- */
+.element-item {
+  position: relative;
+  float: left;
+  width: 270px;
+  height: 300px;
+  margin: 5px;
+  margin-right: 10px;
+}
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+.element-item .name {
+    position: absolute;
+    padding-left: 10px;
+    font-weight: bold;
+    bottom: 0px;
+    z-index: 2;
+    padding: 4px;
+}
+/* ---- .element-item ---- */
+.height1 { 
+  height: 200px; 
+  
+}
+.height2 
+{ 
+  height: 380px;
+  
+}
+.background-image-hold img {
+    display: none;
+}
+.background-image-hold {
+    height: 85%;
+    top: 0;
+    left: 0;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+    z-index: 0;
+    transition: opacity .3s linear;
+    -webkit-transition: opacity .3s linear;
+    opacity: 0;
+    box-shadow: -10px 10px 7px -6px #777;
+}
+.hoveff:hover{
+    opacity:0.6;
+    z-index:3;
+    image: rgba(158, 139, 139, 0.51);
+}
+.overlay:before{
+  position: absolute;
+  margin: 0 0 0 -25px;
+  top: 0;
+  left: 50%;
+  content:" ";
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transition: all 1000ms ease;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Antu_edit-find-mail.svg/768px-Antu_edit-find-mail.svg.png')50% / 70px no-repeat;
+}
+.overlay:hover:before{
+  top: 50%;
+  opacity: 1;
+}
+.overlay:hover img {
+  opacity: 0.5;
+  transition: opacity 1000ms ease;
+  -webkit-backface-visibility: hidden;
+  z-index:5;
+}
+.my-gallery {
+  width: 100%;
+  float: left;
+}
+.my-gallery img {
+  width: 100%;
+  height: auto;
+  box-shadow: -10px 10px 7px -6px #777;
+}
+.my-gallery figure {
+ display: block; 
+  float: left;
+  height: 100% !important;
+  width: 100% !important;
+}
+.my-gallery figcaption {
+  display: none;
+}
+.wrapper {
+  line-height: 0;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 1045;
+}
+.photoswipe-item {
+    width: 100%;
+    height: 100%;
+}
+   
+   </style>
+  </head>
+  <body>
+    
+  
+<div class="container">
+
+<div class="button-group filters-button-group">
+  <button class="button is-checked" data-filter="*">Все</button>
+  <button class="button" data-filter=".wpap">Стиль WPAP</button>
+  <button class="button" data-filter=".monroe">Стиль Монро</button>
+  <button class="button" data-filter=".che">Стиль Че</button>
+</div>
+
+     <div class="grid">
+       <div class="photoswipe-wrapper">
+
+      <div class="element-item height2 monroe hoveff">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/a82/vektornyy_portret_pary_min.jpg" data-size="600x400">
+            <div class="background-image-hold hoveff overlay lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/a82/vektornyy_portret_pary_min.jpg&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/a82/vektornyy_portret_pary_min.jpg" alt="Image description" class="img-responsive"></div>
+          </a>
+          <figcaption class="name caption description">Поп-арт портрет в стиле Монро</figcaption>
+      </div>
+      </div>
+       <div class="element-item height2 wpap hoveff" data-category="wpap">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/45b/wpap_dark_min.jpg" data-size="600x400">
+            <div class="background-image-hold lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/45b/wpap_dark_min.jpg&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/45b/wpap_dark_min.jpg" alt="Image description" class="img-responsive"></div>
+          </a>
+        <figcaption class="name caption description">Портрет в стиле WPAP</figcaption>
+      </div>
+      </div>
+      <div class="element-item height2 monroe hoveff" data-category="monroe">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/f12/devushka_v_stile_monro_min.jpg" data-size="600x400">
+            <div class="background-image-hold lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/f12/devushka_v_stile_monro_min.jpg&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/f12/devushka_v_stile_monro_min.jpg" alt="Image description" class="img-responsive"></div>
+          </a>
+        <figcaption class="name caption description">Поп-арт портрет в стиле Монро</figcaption>
+      </div>
+      </div>
+     <div class="element-item che hoveff" data-category="che">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/c4f/pop_art-v-stile-che.jpg" data-size="600x400">
+            <div class="background-image-hold lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/c4f/pop_art-v-stile-che.jpg&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/c4f/pop_art-v-stile-che.jpg" alt="Image description" class="img-responsive"></div>
+          </a>
+        <figcaption class="name caption description">Поп-арт портрет в стиле Че</figcaption>
+      </div>
+      </div>
+      <div class="element-item height2 che hoveff" data-category="che">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/638/xpop_art_portret_devushki_min.jpg.pagespeed.ic.1PVZ5mJkZw.webp" data-size="600x400">
+            <div class="background-image-hold lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/638/xpop_art_portret_devushki_min.jpg.pagespeed.ic.1PVZ5mJkZw.webp&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/638/xpop_art_portret_devushki_min.jpg.pagespeed.ic.1PVZ5mJkZw.webp" alt="Image description" class="img-responsive"></div>
+          </a>
+        <figcaption class="name caption description">Поп-арт портрет в стиле Че</figcaption>
+      </div>
+      </div>
+       <div class="element-item monroe hoveff" data-category="monroe">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/2a6/xdevushka_chetyre_v_kvadrate_che_min.jpg.pagespeed.ic.FXQJHpynjv.webp" data-size="600x400">
+            <div class="background-image-hold lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/2a6/xdevushka_chetyre_v_kvadrate_che_min.jpg.pagespeed.ic.FXQJHpynjv.webp&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/2a6/xdevushka_chetyre_v_kvadrate_che_min.jpg.pagespeed.ic.FXQJHpynjv.webp" alt="Image description" class="img-responsive"></div>
+          </a>
+        <figcaption class="name caption description">Поп-арт портрет в стиле Монро</figcaption>
+      </div>
+      </div>
+       <div class="element-item monroe hoveff" data-category="monroe">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/28f/popart_uorkhol.jpg" data-size="600x400">
+            <div class="background-image-hold lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/28f/popart_uorkhol.jpg&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/28f/popart_uorkhol.jpg" alt="Image description" class="img-responsive"></div>
+          </a>
+        <figcaption class="name caption description">Поп-арт портрет в стиле Монро</figcaption>
+      </div>
+      </div>
+      <div class="element-item monroe hoveff" data-category="monroe">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/cca/4_pop_art.jpg" data-size="600x400">
+            <div class="background-image-hold lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/cca/4_pop_art.jpg&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/cca/4_pop_art.jpg" alt="Image description" class="img-responsive"></div>
+          </a>
+        <figcaption class="name caption description">Поп-арт портрет в стиле Монро</figcaption>
+      </div>
+      </div>
+      <div class="element-item monroe height1 hoveff" data-category="monroe">
+        <div class="photoswipe-item">
+          <a href="https://muse.ooo/upload/medialibrary/3fb/dvoynoy_portret_devushki_min.jpg" data-size="600x400">
+            <div class="background-image-hold lazyload" style="background: url(&quot;https://muse.ooo/upload/medialibrary/3fb/dvoynoy_portret_devushki_min.jpg&quot;); opacity: 1;"> 
+            <img src="https://muse.ooo/upload/medialibrary/3fb/dvoynoy_portret_devushki_min.jpg" alt="Image description" class="img-responsive"></div>
+          </a>
+        <figcaption class="name caption description">Поп-арт портрет в стиле Монро</figcaption>
+      </div>
+      </div>
+
+     </div>
+  </div> 
+  </div>
+    
+       
+	  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	  
+	  
+        <script src="js/isotope.pkgd.js"></script>
+        <script src="js/gallery.js"></script>
+        <script src="js/lazysizes.min.js" async=""></script>
+        <script src="js/buttonfilt.js"></script>
+        <script src="js/packery.js"></script>
+        <script src="js/photoswipe-ui-default.min.js"></script>
+	      <script src="js/photoswipe.min.js"></script>
+        </body>
+      </html>

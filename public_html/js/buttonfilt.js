@@ -13,7 +13,7 @@ var filterFns = {
   }
 };
 // bind filter on select change
-$('.masonry-filter-holder').on( 'change', function() {
+$('.filters-select').on( 'change', function() {
   // get filter value from option value
   var filterValue = this.value;
   // use filterFn if matches value

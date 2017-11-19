@@ -1,5 +1,5 @@
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
-/*https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css
+/*
 	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
 */
 /* pswp = photoswipe */
@@ -17,10 +17,7 @@
   -webkit-text-size-adjust: 100%;
   /* create separate layer, to avoid paint on window.onscroll in webkit/blink */
   -webkit-backface-visibility: hidden;
-  outline: none; 
-   z-index: 10000;
- 
-}
+  outline: none; }
   .pswp * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
@@ -123,8 +120,7 @@
 
 .pswp__container,
 .pswp__zoom-wrap {
-  -webkit-backface-visibility: hidden;
-  will-change: transform; }
+  -webkit-backface-visibility: hidden; }
 
 .pswp__item {
   position: absolute;

@@ -1,8 +1,4 @@
-$('.photoswipe-wrapper').each(function() {
-  $(this).find('a').each(function() {
-    $(this).attr('data-size', $(this).find('img').get(0).naturalWidth + 'x' + $(this).find('img').get(0).naturalHeight);
-    });
-});
+
 
 
 
